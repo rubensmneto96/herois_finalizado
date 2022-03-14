@@ -1,0 +1,11 @@
+<div metal:use-macro="template/nav/macros/navbar">navbar</div>
+
+<div class="container col-md-6 px-4 py-5 my-5 text-center">
+        <div class="h-80 p-5 bg-light border rounded-3">
+          <h2 tal:content="options/msg | default"> </h2>
+          <a href="cadastrar"><button type="button" class="btn btn-success btn-lg px-4 gap-3">Cadastrar herois</button></a>
+          <a href="listar"><button type="button" class="btn btn-primary btn-lg px-4">Herois</button></a>
+        </div>
+      </div>
+
+<div metal:use-macro="template/foot/macros/footer">footer</div>

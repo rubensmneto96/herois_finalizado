@@ -1,0 +1,21 @@
+<div metal:use-macro="template/nav/macros/navbar" id="header"> navbar </div> 
+
+<main id="home" class="home">
+    <img id="background" src="img" alt="">
+
+    <div class="px-4 py-5 my-5 text-center text-light" id="home">
+      
+      <h1 class="display-5 fw-bold">Site Cadastro de Herois</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Site feito para treinamento! Possui um formulario e CRUD! "Lembre que a mente e o melhor musculo. Bracos fortes podem mover rochedos, mas palavras fortes podem mover montanhas."</p> 
+        <p><i>Sylvester Stallone</i></p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+         <a href="cadastrar"><button type="button" class="btn btn-success btn-lg px-4 gap-3">Cadastrar herois</button></a>
+         <a href="listar"><button type="button" class="btn btn-primary btn-lg px-4">Herois</button></a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+<div metal:use-macro="template/foot/macros/footer"> footer </div>

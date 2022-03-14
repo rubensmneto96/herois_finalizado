@@ -1,0 +1,30 @@
+<div metal:use-macro="template/nav/macros/navbar">navbar</div>
+
+<div class="container col-md-6 px-4 py-5 my-5 text-center">
+        <div tal:repeat="heroi python:context.selSpecific()" class="h-80 p-5 bg-light border rounded-3">
+          <h2>Editar heroi</h2>
+          <h3> ID: <span tal:content="heroi/id_heroi | default">ID</span> | <span  tal:content="heroi/nome | default">nome</span> | <span  tal:content="heroi/poder | default">poder</span></h3>
+          <form action="edit" method="POST">
+              <div>
+                <div>
+                    <input tal:attributes="value heroi/id_heroi | default" type="hidden" class="form-control" name="id_heroi" value="">
+                </div>
+                </div>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome do heroi</label>
+                    <input type="text" class="form-control" name="nome">
+                </div>
+                <div class="mb-3">
+                    <label for="idade" class="form-label">Idade</label>
+                    <input type="number" class="form-control" name="idade">
+                </div>
+                <div class="mb-3">
+                    <label for="poder" class="form-label">Poder</label>
+                    <input type="text" class="form-control" name="poder">
+                </div>
+                <button type="submit" class="btn btn-warning">Editar</button>
+          </form>
+        </div>
+      </div>
+
+<div metal:use-macro="template/foot/macros/footer">footer</div>

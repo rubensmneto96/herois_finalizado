@@ -1,0 +1,1 @@
+DELETE FROM herois WHERE id_heroi = <dtml-var id_heroi>

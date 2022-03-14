@@ -1,0 +1,30 @@
+<div metal:use-macro="template/nav/macros/navbar" id="header"> navbar </div>
+
+<main>
+
+    <div class="px-4 py-5 my-5 text-center text-light">
+      
+      <h1 class="display-5 fw-bold">Adicionar ID do site</h1>
+      <div class="col-lg-6 mx-auto">
+        <form action="manage_addHeroisSite" method="post">
+          <div class="mb-3">
+            <label for="id" class="form-label">ID:</label>
+            <input type="text" class="form-control" id="id_site" name="id:string">
+          </div>
+          <div class="mb-3">
+            <select name="conexao">
+              <div tal:repeat="conexao context/SQLConnectionIDs">
+                <option tal:attributes="value conexao" values="">
+                  <span tal:replace="conexao"></span>
+                </option>
+              </div>
+            </select>
+          </div>
+          <input type="submit" class="btn btn-primary" value="Adicionar">
+        </form>
+      </div>
+    </div>
+
+</main>
+
+<div metal:use-macro="template/foot/macros/footer"> footer </div>

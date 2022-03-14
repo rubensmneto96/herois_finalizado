@@ -1,0 +1,42 @@
+<div metal:use-macro="template/nav/macros/navbar"></div>
+
+<div class="container col-md-8 text-center">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Lista herois</h2>
+          <table class="table table-bordered bg-light">
+            <thead>
+              <tr>
+                <th scope="col">ID Heroi</th>
+                <th scope="col">Nome do heroi</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Poder</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+              <tbody>
+              <tr tal:repeat="heroi python:context.select()">
+               <th scope="row" tal:content="heroi/id_heroi">ID</th>
+                <td tal:content="heroi/nome | default">Nome</td>
+                <td tal:content="heroi/idade | default">Idade</td>
+                <td tal:content="heroi/poder | default">Poder</td>
+                <form action="editar">
+                  <input tal:attributes="value heroi/id_heroi | default" type="hidden" name="id_heroi" value="">
+                  <input tal:attributes="value heroi/nome | default" type="hidden" name="nome" value="">
+                  <input tal:attributes="value heroi/idade | default" type="hidden" name="idade" value="">
+                  <input tal:attributes="value heroi/poder | default" type="hidden" name="poder" value="">
+                <td><a href=""><button class="btn btn-warning">Editar</button></a></td>
+                </form>
+                <form action="deletar">
+                  <input tal:attributes="value heroi/id_heroi | default" type="hidden" name="id_heroi" value="">
+                  <input tal:attributes="value heroi/nome | default" type="hidden" name="nome" value="">
+                  <input tal:attributes="value heroi/idade | default" type="hidden" name="idade" value="">
+                  <input tal:attributes="value heroi/poder | default" type="hidden" name="poder" value="">
+                <td><a href=""><button class="btn btn-danger">Deletar</button></a></td>
+                </form>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+<div metal:use-macro="template/foot/macros/footer"></div>

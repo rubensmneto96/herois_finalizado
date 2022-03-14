@@ -1,0 +1,1 @@
+select * from herois where id_heroi = <dtml-sqlvar id_heroi type="int">

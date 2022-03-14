@@ -1,0 +1,1 @@
+update herois set nome = <dtml-sqlvar nome type="string">, idade = <dtml-sqlvar idade  type="int">, poder = <dtml-sqlvar poder type="string"> where id_heroi = <dtml-sqlvar id_heroi type="int">
